@@ -1,0 +1,102 @@
+/*--- PROMO ---*/
+.promo{
+  text-align: center;
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .title{
+      $size: 1.5 * $font-size;
+      font-size: $size;
+      font-weight: bold;
+    }
+  .entry{
+    padding: 75px 10px;
+    background: #fff;
+    @media screen and (min-width: $middle-scr) {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    >.title{
+      $size: 1.5 * $font-size;
+      display: inline-block;
+      padding-bottom: $size * 1.904761904761905;
+    }
+  }
+  .reason-bars{
+    >*{
+      height: 256px;
+    }
+    span{
+      display: block;
+    }
+    .title{
+      padding-bottom: $line-height - 1 / 26;
+    }
+    .title-prim{
+      font-size: $font-size;
+      line-height: $font-size * 1.5;
+
+    }
+    .bar, .sub-bar{
+      padding: 45px 5px;
+      text-align: center;
+      @media screen and (min-width: $large-scr) {
+        padding-right: 45px;
+        padding-left: 45px;
+      }
+    }
+    .bar{
+      @include v-prefix(box-sizing, border-box);
+      &:first-child{
+        color: #fff;
+        background:$blue;
+        border: 1px solid #8bb9d6;
+      }
+      .title{
+        padding-bottom: 10px;
+      }
+      span:nth-child(2){
+      padding-bottom: $line-height - 1 / 26;
+      }
+    }
+    .sub-bar{
+      @media screen and (min-width: $middle-scr) {
+      height: 330px;
+      }
+      height: auto;
+      @include box-sizing(border-box);
+      img{
+        padding-bottom: $line-height - 1 / 26;
+      }
+      &+.bar{
+        @extend :first-child;
+      }
+    }
+    .b3{
+      background-color: $b3-bgc;
+      border: 1px solid #efefef;
+    }
+    .pic-bar{
+      max-height: 256px;
+      overflow: hidden;
+      img{
+        height: 100%;
+        vertical-align: middle;
+        @media screen and (min-width: 512px + 16) {
+          width: 100%;
+          height: auto;
+        }
+        @media screen and (max-width: $large-scr + 16) and (min-width: $large-scr) {
+          width: auto;
+          height: 100%;
+        }
+        @media screen and (min-width: $large-scr + 16) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

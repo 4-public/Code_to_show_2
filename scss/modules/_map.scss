@@ -1,0 +1,11 @@
+/* MAP */
+.map{
+  position: relative;
+  z-index: 1;
+  height: 550px;
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

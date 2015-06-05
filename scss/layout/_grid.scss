@@ -1,0 +1,137 @@
+@import "susy-setting";
+
+/* --- wrapper --- */
+.layout-wrapper{
+  @include container();
+    min-width: 320px;
+
+  @media screen and (min-width: 1200px) {
+    margin: 0 auto;
+    width: 1200px;
+  }
+}
+/*--- grid HEADER ---*/
+.top-menu-list{
+  @include span(15);
+  li{
+    @include span(3);
+  }
+  .logo-container{
+    @media screen and (max-width: $middle-scr - 1) {
+      @include span($promo-grid-w * 3);
+    }
+  }
+}
+header{
+  .mobile{
+    @include span(15);
+  }
+}
+
+/*--- grid INTRO ---*/
+.intro{
+  @include span(15);
+}
+
+/*--- grid PROMO ---*/
+.promo{
+  @include span(15);
+  .bar{
+    @include span($promo-grid-w * 3);
+    @media screen and (min-width: $large-scr) {
+      @include span($promo-grid-w);
+    }
+  }
+   .sub-bar{
+    @include span($promo-grid-w * 3);
+    @media screen and (min-width: $middle-scr) {
+      @include span($promo-grid-w);
+    }
+   }
+  .pic-bar{
+    @include span($promo-grid-w * 3);
+    @media screen and (min-width: $large-scr) {
+      @include span($promo-grid-w * 2);
+    }
+  }
+  .to-right{
+    @include span($promo-grid-w * 3 last);
+    @media screen and (min-width: $large-scr) {
+      @include span($promo-grid-w last);
+    }
+  }
+}
+
+
+/*--- grid SEARCH FORM ---*/
+.search-title{
+  @include span(15);
+  @media screen and (min-width: 568px) {
+    @include span(15);
+  }
+}
+
+
+/*--- grid MAP ---*/
+.map{
+  @include span(15);
+}
+
+
+/*--- grid FOOTER ---*/
+footer{
+  @include span($promo-grid-w * 3);
+  >div{
+    display: inline-block;
+    width: 100%;
+    @media screen and (min-width: $large-scr) {
+      width: 32.5%;
+    }
+    &:last-child{
+      @media screen and (min-width: $middle-scr) and (max-width: $large-scr) {
+        width: 100%;
+      }
+    }
+    &:not(:last-child){
+      @media screen and (min-width: $middle-scr) and (max-width: $large-scr) {
+        width: 49%;
+      }
+    }
+  }
+}
+
+
+/*--- grid FILTER ---*/
+.filter{
+  .col{
+    @include span(5);
+    @media screen and (max-width: $middle-scr){
+      @include span(7.5);
+      &:last-child{
+        @include span(15);
+      }
+    }
+  }
+}
+
+/*--- grid SORT ---*/
+.sort-bar{
+  @include span(15);
+
+  h1{
+    @include span(4);
+    @media screen and (max-width: $middle-scr){
+      @include span(7.5);
+    }
+  }
+  .sort-by{
+    @media screen and (max-width: 640px){
+      @include span(15);
+    }
+  }
+}
+
+/*--- grid RESULTS ---*/
+.results{
+  @include span(15);
+}

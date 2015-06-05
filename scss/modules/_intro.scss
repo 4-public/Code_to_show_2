@@ -1,0 +1,36 @@
+/*--- INTRO ---*/
+    $mb: 4.2857142857em;
+.intro{
+  @media screen and (min-width: $middle-scr) {
+    background:transparent url('../img/intro-background-photo.png') 50% top no-repeat;
+  @include background-size (cover);
+  }
+  position: relative;
+  padding-top: 6.4%;
+  background:transparent url('../img/intro-background-photo.png') 50% 35% no-repeat;
+  @include background-size (cover);
+
+  .w, .b{
+      width: 55%;
+  }
+  .s{
+    width: 80%;
+  }
+  .w, .s, .b {
+  @media screen and (min-width: $middle-scr) {
+      width: auto;
+      margin-bottom: $mb;
+  }
+    display: block;
+    margin: 0 auto;
+    margin-bottom: $mb / 2;
+  }
+  .white-decor{
+    @media screen and (min-width: $large-scr) {
+      height: 36px;
+    }
+    width: 100%;
+    height: 3%;
+    margin-bottom: -8px;
+  }
+}

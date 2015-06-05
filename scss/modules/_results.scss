@@ -1,0 +1,106 @@
+/*--- RESULTS ---*/
+.results{
+  border-bottom: 1px solid #e5e5e5;
+  & &#{-item}{
+    padding: 30px 4%;
+    border-top: 1px solid  #e5e5e5;
+    &.results-item:after{
+      display: table;
+      content: '';
+      clear: both;
+    }
+
+  }
+  img{
+    float: left;
+  }
+  .item-left-floater{
+    float: left;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    @media screen and (min-width: 640px) {
+      float: left;
+      width: auto;
+      margin: 0 0 0 30px;
+      text-align: left;
+    }
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    h1.title{
+      margin: 0;
+      cursor: default;
+      &:hover{
+        color: $blue;
+      }
+      &:active{
+        color: #cacaca;
+      }
+    }
+    &#{-inn}{
+      display: inline-block;
+      margin-left: 6px;
+      span{
+        display: inline-block;
+        margin: 8px 0px;
+      }
+    }/*
+    &>div{
+      text-align: right;
+      &:last-child{
+          text-align: left;
+      }
+    }*/
+  }
+
+
+  a{
+    display: block;
+    padding: 3px 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    &.details{
+      background-color: $blue;
+      &:hover{
+        background-color: $blue-hover;
+      }
+      &:active{
+        color: #94b9d2;
+        background-color: $blue-active;
+      }
+    }
+    &.book{
+      background-color: $brown;
+      &:hover{
+        background-color: darken($brown, 10%);
+      }
+      &:active{
+        color: #928a85;
+        background-color: darken($brown, 20%);
+      }
+    }
+  }
+
+  .rate{
+    float: right;
+    &#{-num}{
+      float: right;
+      padding: 0px 16px;
+      background-color: $bgcol;
+    }
+  }
+
+  .stars{
+    width: 100%;
+    margin-bottom: 46px;
+    text-align: right;
+    .icon-star{
+      color: $blue;
+      font-size: $font-size + 4;
+    }
+  }
+}

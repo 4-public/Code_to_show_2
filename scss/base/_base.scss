@@ -1,0 +1,30 @@
+body{
+  font-family: 'PT Sans', sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: uppercase;
+  @media screen and (min-width: $middle-scr) {
+    background: $bgcol;
+  }
+  >header{
+    position: relative;
+    z-index: 3;
+  }
+
+.layout-wrapper{
+  @include box-shadow( 0px 0px 25px #cfcfcf);
+}
+}
+main{
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  &:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+a{
+  text-decoration: none;
+}
